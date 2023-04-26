@@ -6,21 +6,25 @@ import validator from './validator.js';
 //     alert(textoMaiusculo);
 //   }
 
-// const
+//const validarCartao = validator.maskify
 // validator.isValid(creditCardNumber): creditCardNumber
-// validator.maskify(creditCardNumber): creditCardNumber
-
-const cartaoCredito = document.getElementById ("numero-cartao");
-
-
-
-// document.getElementById("validar").addEventListener("click", meubotao())
 
 // function meubotao(){
-//    var cartao = document.getElementById("numero-cartao")
-//    console.log(cartao)
-//    document.getElementById("result").innerHTML = "O numero do seu cartão é" + cartao + "!"
-// }
+//     var cartao = document.getElementById("numero-cartao").value
+//     console.log(cartao)
+    
+//  }
+ 
+
+
+
+const inputNumeroCartao = document.getElementById ("numero-cartao")
+//criei uma variável para armazenar o numero do cartão
+const numeroEscondido = validator.maskify (inputNumeroCartao)
+const validarNumeroCartao = validator.isValid (inputNumeroCartao)
+
+
+
 
 
 
