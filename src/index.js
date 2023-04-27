@@ -1,35 +1,25 @@
 import validator from './validator.js';
 
-// function uppercase() {
-//     let texto = document.getElementById("nome").value;
-//     let textoMaiusculo = texto.toUpperCase();
-//     alert(textoMaiusculo);
-//   }
+const msgBotao = document.getElementById("botaoValidar").addEventListener("click", validarCartao);
+//criei uma variável para vincular o button 
 
-//const validarCartao = validator.maskify
-// validator.isValid(creditCardNumber): creditCardNumber
-
-// function meubotao(){
-//     var cartao = document.getElementById("numero-cartao").value
-//     console.log(cartao)
-    
-//  }
- 
-
-
-
-const inputNumeroCartao = document.getElementById ("numero-cartao")
-//criei uma variável para armazenar o numero do cartão
-const numeroEscondido = validator.maskify (inputNumeroCartao)
-const validarNumeroCartao = validator.isValid (inputNumeroCartao)
-
-
-
+function validarCartao() {
+    const inputNumeroCartao = document.getElementById("numero-cartao").value;
+    const numeroEscondido = validator.maskify(inputNumeroCartao);
+    const validarNumeroCartao = validator.isValid(inputNumeroCartao);
+    if (validarNumeroCartao === true) {
+        return document.getElementById("valido/invalido").innerText= "Sua compra foi Aprovada!!";
+    }
+    else {
+        return "Infelizmente, cartão inválido!"
+    }
+}
 
 
 
 {
-console.log(validator);}
+    console.log(validator);
+}
 
 
 
