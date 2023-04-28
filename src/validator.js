@@ -4,11 +4,11 @@ const validator = {
     const caracterExibidos = numeroCartaoCredito.slice(-4);
     const caracterMascarado = numeroCartaoCredito.slice(0, -4).replace(/./g, "#");
     const cartaoCreditoMascarado = caracterMascarado + caracterExibidos;
-    console.log(cartaoCreditoMascarado, "cartaocreditomascarado")
 
+    console.log (cartaoCreditoMascarado, "cartao mascardo")
     return cartaoCreditoMascarado
 
-
+    
   },
 
 
@@ -19,43 +19,40 @@ const validator = {
   isValid: function (numeroCartaoCredito) {
 
     const cartaoCreditoArray = numeroCartaoCredito.split(" ");
-    console.log(cartaoCreditoArray, "string array")
-    //mudei a string cartão para array 
+    console.log(cartaoCreditoArray, "passando para array")
+    
     const cartaoCreditoNum = cartaoCreditoArray[0].split("").map(Number).reverse();
-    console.log(cartaoCreditoNum, "array number")
-    //dividi a string em elementos individuais, transformei em numeros e fiz o reverse
-
+    console.log (cartaoCreditoNum, "separando os elementos, passando para numeros e revertendo")
+    
     for (let i = 0; i < cartaoCreditoNum.length; i++) {
-      if (i % 2 === 0) {
+      if (i % 2 === 1) {
         cartaoCreditoNum[i] *= 2;
       }
     }
-    console.log(cartaoCreditoNum, "x2 pares")
-    // Multipliquei por 2 os numeros nas casas pares
+    console.log (cartaoCreditoNum, "multiplica 2")
+    
 
     const numerosMaiores = cartaoCreditoNum.filter(function (numero) {
       return numero >= 10;
     })
+    console.log (numerosMaiores, "numeros maiores, separou")
+
     const numerosMaioresArray = numerosMaiores.flatMap(numero => numero.toString().split("")).map(Number);
-
-    console.log(numerosMaioresArray, "maior que 10")
-
-    //  const soma1 = numerosMaioresArray.reduce((acumulador, numero) => acumulador + numero);
-    //       console.log (soma1, "soma 1")
+    console.log (numerosMaioresArray, "separando os digitos")
 
     const numerosMenores = cartaoCreditoNum.filter(function (numero) {
       return numero < 10;
     })
-    console.log(numerosMenores, "menores 10")
+    console.log (numerosMenores)
 
     const somaTotal = [...numerosMaioresArray, ...numerosMenores].reduce((acumulador, valorAtual) => acumulador + valorAtual, 0);
-    console.log(somaTotal, "soma de todos os numeros")
+    
+    console.log (somaTotal)
 
     
-    somaTotal%10 === 0
+    return somaTotal%10 === 0;
+  }
 }
-}
-
 
 
 
