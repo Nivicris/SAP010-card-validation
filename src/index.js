@@ -5,13 +5,15 @@ const msgBotao = document.getElementById("botaoValidar").addEventListener("click
 
 function validarCartao() {
     const inputNumeroCartao = document.getElementById("numero-cartao").value;
+    console.log (inputNumeroCartao)
     const numeroEscondido = validator.maskify(inputNumeroCartao);
-    const validarNumeroCartao = validator.isValid(inputNumeroCartao);
+    const validarNumeroCartao = validator.isValid(inputNumeroCartao); 
+    
     if (validarNumeroCartao === true) {
         return document.getElementById("valido/invalido").innerText= "Sua compra foi Aprovada!!";
     }
     else {
-        return "Infelizmente, cartão inválido!"
+        return "Infelizmente, seu cartão" + numeroEscondido + "é inválido!"
     }
 }
 
