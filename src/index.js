@@ -6,15 +6,17 @@ document
 
 function validarCartao() {
   const inputNumeroCartao = document.getElementById("numero-cartao").value;
-  console.log(inputNumeroCartao);
+
   const numeroEscondido = validator.maskify(inputNumeroCartao);
+
   const validarNumeroCartao = validator.isValid(inputNumeroCartao);
 
   if (validarNumeroCartao === true) {
     return (document.getElementById("valido/invalido").innerText =
-      "Sua compra foi Aprovada!!");
+      "Sua compra com o cartão" + numeroEscondido + "foi Aprovada!!");
   } else {
-    return "Infelizmente, seu cartão" + numeroEscondido + "é inválido!";
+    return (document.getElementById("valido/invalido").innerText =
+      "Infelizmente, seu cartão" + numeroEscondido + "é inválido!");
   }
 }
 
@@ -28,18 +30,16 @@ document
     const campoObrigatorio3 = document.querySelector("#codigo-seguranca");
     const campoObrigatorio4 = document.querySelector("#nome");
 
-    const numeroCartaoCompleto = campoObrigatorio1.value.replace(/\s/g, "");
-    if (!numeroCartaoCompleto.match(/^\d{16}$/)) {
-      alert(
-        "Por favor, digite um número de cartão de crédito válido com 16 dígitos."
-      );
-      evento.preventDefault();
-    }
-    if (campoObrigatorio1.value.trim() === "") {
-      document.getElementById("valido/invalido").innerText =
-        "Para finalizar a compra, preencha os dados do seu cartão de crédito!";
-      return;
-    }
+    // const numeroCartaoCompleto = campoObrigatorio1.value.replace(/\s/g, "");
+    // if (!numeroCartaoCompleto.match(/^\d{16}$/)){
+    //     document.getElementById("valido/invalido").innerText ="Por favor, digite um número de cartão de crédito válido com 16 dígitos."
+    // }
+
+    if (!/^\d{16}$/.test(campoObrigatorio1.value)) {
+        document.getElementById("valido/invalido").innerText =
+          "Preencha corretamente o número do seu cartão de crédito (16 dígitos, sem espaços).";
+        return;
+      }
     if (campoObrigatorio1.value.length < 16) {
       document.getElementById("valido/invalido").innerText =
         "O campo deve conter os 16 números do seu cartão de crédito.";
@@ -62,6 +62,13 @@ document
       return;
     }
   });
+
+ // Colocando todas as letras maíusculas do campo nome
+onkeyup = function myFunction() {
+  let x = document.getElementById("nome");
+  x.value = x.value.toUpperCase();
+};
+
 {
   console.log(validator);
 }
