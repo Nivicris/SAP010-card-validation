@@ -13,7 +13,10 @@
 
 
 ```text
-Projeto desenvolvido pela estudante da Laboratoria Nívia Miranda, que tem como objetivo trabalhar os fundamentos de JavaScrit, incluindo conceitos como variáveis, condicionais e funções, bem como eventos e manipulação básica de DOM, fundamentos HTML e CSS.
+Projeto desenvolvido pela estudante da Laboratoria Nívia Miranda, 
+que tem como objetivo trabalhar os fundamentos de JavaScrit, 
+incluindo conceitos como variáveis, condicionais e funções, 
+bem como eventos e manipulação básica de DOM, fundamentos HTML e CSS.
 
 ```
 
