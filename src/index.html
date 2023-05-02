@@ -7,45 +7,69 @@
   </head>
 
   <body>
-    <header>
-
-      <h1>Detalhes do Pagamento</h1>
-  
-    </header>
-    <main>
-
-      <h2>Cartão de Crédito</h2>
-      
-      <br>
-
-      <label for="numero-cartao"><strong>Número do Cartão:</strong></label>
-      <input type="text" id="numero-cartao" name="numero-cartao" placeholder="xxxx xxxx xxxx xxxx" minlength="16" maxlength="16" required>
-
-      <br>
+    <body>
+      <header class="header">
+            <nav>
+                <ul class="etapas-compra">
+                    <li>1. Escolha <br> do Produto</li>
+                    <li>2. Resumo <br> da Compra</li>
+                    <li>3. Endereço <br> de Entrega</li>
+                    <li>4. Pagamento <br> (você está aqui)</li>
+                </ul>
+            </nav>
+      </header>
     
-      <br>
-  
-      <label for="validade-cartao"><strong>Validade:</strong></label>
-      <input type="month" id="validade-cartao" name="validade-cartao" placeholder="MM/AA" required>
-
-      <label for="codigo-seguranca"><strong>Código de Segurança (CVV):</strong></label>
-      <input type="text" id="codigo-seguranca" name="codigo-seguranca" placeholder="xxx" minlength="3" maxlength="3" required>
-
-      <br>
-      <br>
-
-      <label for="nome"><strong>Nome Completo:</strong></label>
-      <input type="text" id="nome" name="nome" placeholder="Digite o nome igual do cartão" required>
+      <main>
+        <section>
+            <div class="pagamento">          
+        
+                <h1>Detalhes do Pagamento</h1>
+                <img src="assets/bandeiras-cartao2.png" alt="bandeiras de cartão aceitas">
+    
+                <div class="pagamento-info">
+                    <div class="dados-cartao">
+                        <h2>Cartão de Crédito</h2>
+                        <div >
+                            <label for="numero-cartao"><strong>Número do Cartão:</strong></label>
+                            <input type="text" id="numero-cartao" name="numero-cartao" placeholder="xxxx xxxx xxxx xxxx" minlength="16" maxlength="16" required>
+                        </div>
+    
+                        <div>
+                            <label for="validade-cartao"><strong>Validade:</strong></label>
+                            <input type="month" id="validade-cartao" name="validade-cartao" placeholder="MM/AA" required>
+                    
+                            <label for="codigo-seguranca"><strong>Código de Segurança (CVV):</strong></label>
+                            <input type="text" id="codigo-seguranca" name="codigo-seguranca" placeholder="xxx" minlength="3" maxlength="3" required>
+    
+                        </div>
+              
+                        <div>
+                            <label for="nome"><strong>Nome Completo:</strong></label>
+                            <input type="text" id="nome" name="nome" placeholder="Digite o nome igual do cartão" required>
+                            <p id="valido/invalido"></p>
+                        </div>   
+                    </div> 
+    
+                    <div class="resumo-compra">
+                        <h2>Seu carrinho</h2>
+                        <p>Qde: 01</p>
+                        <p>Produto: lvr codigo limpo - rc martin</p>
+                        <h2>Total: 109,90<h2>
+                    </div>                  
+                </div>
+                
+              
+            </div>       
+           
+          
+        </section>          
+    
+      </main>
       
-      <br>
-
-      <p id="valido/invalido"></p>
-
-    </main>
-
-    <footer id="meu-Botao">
-      <button type="submit" id="botaoValidar">Finalizar Pagamento</button>
-    </footer>
+      <footer id="meu-Botao">     
+        <button id="botaoValidar">Finalizar Pagamento</button>      
+      </footer>      
+    
    
     
    <script src="index.js" type="module"></script>

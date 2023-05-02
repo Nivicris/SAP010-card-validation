@@ -11,10 +11,10 @@ function validarCartao() {
 
   if (validarNumeroCartao === true) {
     return (document.getElementById("valido/invalido").innerText =
-      "Sua compra com o cartão" + numeroEscondido + "foi Aprovada!!");
+      "Sua compra com o cartão " + numeroEscondido + " foi Aprovada!!");
   } else {
     return (document.getElementById("valido/invalido").innerText =
-      "Infelizmente, seu cartão" + numeroEscondido + "é inválido!");
+      "Infelizmente, seu cartão " + numeroEscondido + " é inválido!");
   }
 }
 
