@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+     <body>
+      <header class="header">
+            <nav>
+                <ul class="etapas-compra">
+                    <li>1. Escolha <br> do Produto</li>
+                    <li>2. Resumo <br> da Compra</li>
+                    <li>3. Endereço <br> de Entrega</li>
+                    <li>4. Pagamento <br> (você está aqui)</li>
+                </ul>
+            </nav>
+      </header>
+    
+      <main>
+        <section>
+            <div class="pagamento">          
+        
+                <h1>Detalhes do Pagamento</h1>
+                <img src="bandeiras-cartao2.png" alt="bandeiras de cartão aceitas">
+    
+                <div class="pagamento-info">
+                    <div class="dados-cartao">
+                        <h2>Cartão de Crédito</h2>
+                        <div >
+                            <label for="numero-cartao"><strong>Número do Cartão:</strong></label>
+                            <input type="text" id="numero-cartao" name="numero-cartao" placeholder="xxxx xxxx xxxx xxxx" minlength="16" maxlength="16" required>
+                        </div>
+    
+                        <div>
+                            <label for="validade-cartao"><strong>Validade:</strong></label>
+                            <input type="month" id="validade-cartao" name="validade-cartao" placeholder="MM/AA" required>
+                    
+                            <label for="codigo-seguranca"><strong>Código de Segurança (CVV):</strong></label>
+                            <input type="text" id="codigo-seguranca" name="codigo-seguranca" placeholder="xxx" minlength="3" maxlength="3" required>
+    
+                        </div>
+              
+                        <div>
+                            <label for="nome"><strong>Nome Completo:</strong></label>
+                            <input type="text" id="nome" name="nome" placeholder="Digite o nome igual do cartão" required>
+                            <p id="validoInvalido"></p>
+                        </div>   
+                    </div> 
+    
+                    <div class="resumo-compra">
+                        <h2>Seu carrinho</h2>
+                        <p>Qde: 01</p>
+                        <p>Produto: lvr codigo limpo - rc martin</p>
+                        <h2>Total: 109,90</h2>
+                    </div>                  
+                </div>
+                
+              
+            </div>       
+           
+          
+        </section>          
+    
+      </main>
+      
+      <footer id="meu-Botao">     
+        <button id="botaoValidar">Finalizar Pagamento</button>      
+      </footer>      
+    
+   
+    
+   <script src="index.js" type="module"></script>
+  </body>
+</html>
