@@ -10,10 +10,10 @@ function validarCartao() {
   const validarNumeroCartao = validator.isValid(inputNumeroCartao);
 
   if (validarNumeroCartao === true) {
-    return (document.getElementById("valido/invalido").innerText =
+    return (document.getElementById("validoInvalido").innerText =
       "Sua compra com o cartão " + numeroEscondido + " foi Aprovada!!");
   } else {
-    return (document.getElementById("valido/invalido").innerText =
+    return (document.getElementById("validoInvalido").innerText =
       "Infelizmente, seu cartão " + numeroEscondido + " é inválido!");
   }
 }
@@ -29,28 +29,28 @@ document
     const campoObrigatorio4 = document.querySelector("#nome");
 
     if (!/^\d{16}$/.test(campoObrigatorio1.value)) {
-      document.getElementById("valido/invalido").innerText =
+      document.getElementById("validoInvalido").innerText =
         "Preencha corretamente o número do seu cartão de crédito (16 dígitos, sem espaços).";
       return;
     }
     if (campoObrigatorio1.value.length < 16) {
-      document.getElementById("valido/invalido").innerText =
+      document.getElementById("validoInvalido").innerText =
         "O campo deve conter os 16 números do seu cartão de crédito.";
       return;
     }
     if (campoObrigatorio2.value.trim() === "") {
-      document.getElementById("valido/invalido").innerText =
-        "Por favor, preencha mês e ano de validade do seu cartão";
+      document.getElementById("validoInvalido").innerText =
+        "Por favor, preencha mês e ano de validade do seu cartão.";
       return;
     }
     if (campoObrigatorio3.value.trim() === "") {
-      document.getElementById("valido/invalido").innerText =
+      document.getElementById("validoInvalido").innerText =
         "Por favor, preencha o código de segurança que consta no verso do seu cartão com 3 digitos.";
       return;
     }
 
     if (campoObrigatorio4.value.trim() === "") {
-      document.getElementById("valido/invalido").innerText =
+      document.getElementById("validoInvalido").innerText =
         "Por favor, preencha o nome do titular do cartão.";
       return;
     }

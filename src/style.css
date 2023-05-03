@@ -130,23 +130,27 @@ section .pagamento {
   font-size: 1.2rem;
   width: 16ch;
   color: #7c7c7c;
+  border-radius: 6px;
 }
 
 .pagamento .dados-cartao div #validade-cartao {
   font-size: 1.2rem;
   color: #7c7c7c;
+  border-radius: 6px;
 }
 
 .pagamento .dados-cartao div #codigo-seguranca {
   font-size: 1.2rem;
   width: 3ch;
   color: #7c7c7c;
+  border-radius: 6px
 }
 
 #nome {
   font-size: 1.2rem;
   width: 30ch;
   color: #7c7c7c;
+  border-radius: 6px
 }
 
 /* carrinho de compra */
@@ -196,3 +200,12 @@ section .pagamento {
   border: 2px solid #903833;
   font-weight: bold;
 }
+
+/* informação se o cartão foi ou não aprovado */
+#validoInvalido {
+  font-size: 1.0rem;
+  width: 60ch;
+  color: #903833;
+  font-weight: bold;
+  margin-top: 20px;
+ }
