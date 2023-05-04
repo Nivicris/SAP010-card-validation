@@ -39,6 +39,6 @@ Através de um boilerplate iniciei os métodos IsValid que retorna um boolean, d
 
 Em termos de interface, foi criada uma página que simula a última etapa de um compra pela internet, que é o pagamento.  Inclui os campos de inserir número do cartão, validade, código de segurança e nome do titular do cartão. Todos esses campos, é obrigatório o preenchimento para retornar se a compra foi ou não aprovada. 
 
-<img src="card-validation.png.jpg" alt="tela do projeto">
+<img src="card-validation.jpg" alt="tela do projeto">
 
 
