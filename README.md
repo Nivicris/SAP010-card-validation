@@ -37,8 +37,6 @@ O objetivo é garantir que os números de cartão de crédito que eles estão li
 
 Através de um boilerplate iniciei os métodos IsValid que retorna um boolean, de acordo com o algoritimo de Luhn e Maskify que retorna os números do cartão de crédito mascarado, exceto os 4 últimos.  Os testes unitários cobriram 100% os statements, functions, lines e branches.
 
-Em termos de interface, foi criada uma página que simula a última etapa de um compra pela internet, que é o pagamento.  Inclui os campos de inserir número do cartão, validade, código de segurança e nome do titular do cartão. Todos esses campos, é obrigatório o preenchimento para retornar se a compra foi ou não aprovada. 
+Em termos de interface, foi criada uma página que simula a última etapa de um compra pela internet, que é o pagamento.  Inclui os campos de inserir número do cartão, validade, código de segurança e nome do titular do cartão. Todos esses campos, é obrigatório o preenchimento para retornar se a compra foi ou não aprovada. Na lateral da página inclui um carrinho de compra, com o resumo do pedido. Na parte superior da tela inclui as etapas de compra, informando que o usuário está na fase do pagamento. 
 
-<img src="card-validation.jpg" alt="tela do projeto">
-
-
+![Alt text](src/card-validation.jpg)
